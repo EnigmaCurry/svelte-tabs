@@ -69,9 +69,8 @@
     }
   });
 
-  $: selectedTabIndex, ()=>{
-    selectedTab.set(tabs[selectedTabIndex]);
-    selectedPanel.set(panels[selectedTabIndex]);
+  $: selectedTabIndex, ()=> {
+     selectTab(tabs[selectedTabIndex]);
   };
 
   async function handleKeyDown(event) {
